@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import {
-	Platform,
-	StyleSheet,
-	Text,
-	View,
-	Button,
-	TextInput,
-} from 'react-native';
+import {Button, Text, Item, Form, Label, Input, Container, Content} from 'native-base'
+
 import { LoginAction } from '../../../Config/Auth';
 
 
-class Login extends React.Component {
+class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -30,39 +24,23 @@ class Login extends React.Component {
 
 	render() {
 		return (
-			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff' }}>
-			<Text>Login!</Text>
-			<TextInput
-				style={{height: 40, width: 300}}
-				keyboardType='email-address'
-				placeholder="Email"
-				spellCheck={false}
-				onChangeText={(email) => this.setState({email})}
-			/>
-			<TextInput
-				style={{height: 40, width: 300}}
-				placeholder="Senha"
-				secureTextEntry={true}
-				onChangeText={(password) => this.setState({password})}
-			/>
-
-		<Button
-			title="Entrar"
-			onPress={this.SignIn}
-		/>
-
-
-	<Button
-		title="Go to Sign Up"
-		onPress={() => this.props.navigation.navigate('Signup')}
-	/>
-	<Button
-		title="Go to Home"
-		onPress={() => this.props.navigation.navigate('Home')}
-	/>
-
-
-	</View>
+			<Container style={{flex: 1, alignItems: 'center', justifyContent:'center'}}>
+				<Content style={{width: 300}}>
+					<Form>
+						<Item floatingLabel>
+						<Label>Email</Label>
+						<Input />
+						</Item>
+						<Item floatingLabel last>
+						<Label>Password</Label>
+						<Input />
+						</Item>
+					</Form>
+					<Button block style={{marginTop: 20}} onPress={() => this.props.navigation.navigate('Home')}><Text>Login</Text></Button>
+					<Button block style={{marginTop: 20}} onPress={() => this.props.navigation.navigate('Signup')}><Text>Cadastro</Text></Button>
+					<Text style={{fontSize: 20, color: '#1F4788', textAlign:'center', marginTop: 15, textDecorationLine: 'underline'}}>Recuperar Senha</Text>
+				</Content>
+			</Container>
 		);
 }
 }

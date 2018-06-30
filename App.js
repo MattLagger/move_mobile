@@ -16,14 +16,13 @@ import Routes from './Routes'
 import { YellowBox } from 'react-native';
 import {IsSignedIn} from './Config/Auth';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
-import Catalogo from './Screens/Main/Catalogo/Catalogo';
 import { Container, Header, Content, Spinner } from 'native-base';
 
 class App extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			signedIn: true,
+			signedIn: false,
 			checkedSignIn: false,
 			isLoading: true
 		}
