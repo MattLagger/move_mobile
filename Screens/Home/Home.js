@@ -1,6 +1,17 @@
 import React from 'react'
-import {Text} from 'react-native'
+import { Container, Content } from 'native-base'
+import Header from '../Layouts/Header'
+import Card from './Card'
 
 export default () => (
-    <Text> Home </Text>
+    <Container>
+        <Header title='Home'/>
+        <Content>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+        </Content>
+    </Container>
 )
