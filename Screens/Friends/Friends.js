@@ -10,21 +10,25 @@ export default class extends Component{
         friendsRequests:[
             {
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
-                name: 'Wendreo Matheus'
+                name: 'Wendreo Matheus',
+                city: 'Rio Branco'
             },
             {
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
-                name: 'Wendreo Matheus'
+                name: 'Wendreo Matheus',
+                city: 'Rio Branco'
             }
         ],
         friends:[
             {
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
-                name: 'Wendreo Matheus'
+                name: 'Wendreo Matheus',
+                city: 'Rio Branco'
             },
             {
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
-                name: 'Wendreo Matheus'
+                name: 'Wendreo Matheus',
+                city: 'Rio Branco'
             }
         ]
     }
@@ -41,6 +45,7 @@ export default class extends Component{
                 </Left>
                 <Body>
                     <Text>{item.name}</Text>
+                    <Text note> {item.city} </Text>
                 </Body>
                 <Right>
                     <Icon name='keyboard-arrow-right' color='#4834d4' size={40} />
@@ -57,10 +62,11 @@ export default class extends Component{
                 </Left>
                 <Body>
                     <Text>{item.name}</Text>
+                    <Text note> {item.city} </Text>
                 </Body>
                 <Right>
                     <Button transparent light>
-                        <Icon name='control-point' color='#4834d4' size={40} />
+                        <Icon name='control-point' color='#4834d4' size={30} />
                     </Button>
                 </Right>
             </ListItem>

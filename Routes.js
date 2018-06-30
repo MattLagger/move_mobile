@@ -57,16 +57,22 @@ const AuthStack = createStackNavigator({
  */
 const MainStack = createBottomTabNavigator(
 	{
-		Friends:{
-			screen: Friends,
-		},
 		Home:{
 			screen: Home,
+			navigationOptions:{
+				tabBarIcon: ({tintColor}) => <Icon size={30} name='home' color={tintColor} />
+			}
 		},
 		Events:{
 			screen: Events,
 			navigationOptions:{
 				tabBarIcon: ({tintColor}) => <Icon size={30} name='date-range' color={tintColor} />
+			}
+		},
+		Friends:{
+			screen: Friends,
+			navigationOptions:{
+				tabBarIcon: ({tintColor}) => <Icon size={30} name='group' color={tintColor} />
 			}
 		}
 	},
@@ -78,7 +84,8 @@ const MainStack = createBottomTabNavigator(
 			fontSize: 15
 		},
 		style:{
-			backgroundColor: '#4834d4'
+			backgroundColor: '#4834d4',
+			height: 55
 		}
 	},
 }
