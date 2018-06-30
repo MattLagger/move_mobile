@@ -12,7 +12,7 @@ import {
 	View,
 	Button
 } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialIcons'
 import { 
 	createBottomTabNavigator, 
 	createStackNavigator,
@@ -57,14 +57,29 @@ const AuthStack = createStackNavigator({
  */
 const MainStack = createBottomTabNavigator(
 	{
-		Friends,
-		Home,
-		Events
+		Friends:{
+			screen: Friends,
+		},
+		Home:{
+			screen: Home,
+		},
+		Events:{
+			screen: Events,
+			navigationOptions:{
+				tabBarIcon: ({tintColor}) => <Icon size={30} name='date-range' color={tintColor} />
+			}
+		}
 	},
 	{
 	tabBarOptions: {
-		activeTintColor: 'tomato',
-		inactiveTintColor: 'gray',
+		activeTintColor: '#fff',
+		inactiveTintColor: '#c1c1c1',
+		labelStyle:{
+			fontSize: 15
+		},
+		style:{
+			backgroundColor: '#4834d4'
+		}
 	},
 }
 );
