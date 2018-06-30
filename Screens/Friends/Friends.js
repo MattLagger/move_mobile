@@ -9,11 +9,13 @@ export default class extends Component{
         isVisible: false,
         friendsRequests:[
             {
+								id: '1',
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
                 name: 'Wendreo Matheus',
                 city: 'Rio Branco'
             },
             {
+								id: '1',
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
                 name: 'Wendreo Matheus',
                 city: 'Rio Branco'
@@ -21,11 +23,13 @@ export default class extends Component{
         ],
         friends:[
             {
+								id: '1',
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
                 name: 'Wendreo Matheus',
                 city: 'Rio Branco'
             },
             {
+								id: '1',
                 image: 'https://twistedsifter.files.wordpress.com/2012/09/trippy-profile-pic-portrait-head-on-and-from-side-angle.jpg?w=800&h=700&zoom=2',
                 name: 'Wendreo Matheus',
                 city: 'Rio Branco'
@@ -39,7 +43,7 @@ export default class extends Component{
 
     renderRow = () => {
         return this.state.friends.map((item) => (
-            <ListItem avatar style={{marginTop: 10}}>
+            <ListItem avatar style={{marginTop: 10}} key={item.id}>
                 <Left>
                     <Thumbnail source={{uri: item.image}} />
                 </Left>
@@ -56,7 +60,7 @@ export default class extends Component{
 
     renderRequests = () => {
         return this.state.friendsRequests.map((item) => (
-            <ListItem avatar style={{marginTop: 10}}>
+            <ListItem avatar style={{marginTop: 10}} key={item.id}>
                 <Left>
                     <Thumbnail source={{uri: item.image}} />
                 </Left>

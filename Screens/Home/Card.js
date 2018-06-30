@@ -35,12 +35,12 @@ export default () => (
         <CardItem>
             <Left>
                 <Icon name="place"size={20} color='#a1a1a1a1' />
-                <Text style={{color: 'a1a1a1', fontSize: 15}}>Universidade Federal do Acre</Text>
+                <Text style={{color: '#a1a1a1', fontSize: 15}}>Universidade Federal do Acre</Text>
             </Left>
             <Body />
             <Right style={{flex: 1, alignItems: 'center', flexDirection: 'row-reverse'}}>
-                <Icon name="alarm"size={20} color='#a1a1a1a1' />  
-                <Text style={{color: 'a1a1a1', fontSize: 15}}>11hs</Text>
+                <Icon name="alarm"size={20} color='#a1a1a1' />  
+                <Text style={{color: '#a1a1a1', fontSize: 15}}>11hs</Text>
             </Right>
         </CardItem>
     </Card>
