@@ -58,7 +58,7 @@ class Login extends React.Component {
 	/>
 	<Button
 		title="Go to Profile"
-		onPress={() => this.props.navigation.navigate('Perfil')}
+		onPress={() => this.props.navigation.navigate('Home')}
 	/>
 
 

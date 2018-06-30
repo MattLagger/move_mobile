@@ -20,9 +20,9 @@ import {
 } from 'react-navigation';
 
 // Importa os componentes do MainStack
-import Perfil from './Screens/Main/Perfil/Perfil';
-import Catalogo from './Screens/Main/Catalogo/Catalogo';
-import Consultas from './Screens/Main/Consultas/Consultas';
+import Home from './Screens/Home/Home';
+import Events from './Screens/Events/Events';
+import Friends from './Screens/Friends/Friends';
 
 // Importa os componentes do AuthStack 
 import Login from './Screens/Auth/Login/Login';
@@ -57,34 +57,15 @@ const AuthStack = createStackNavigator({
  */
 const MainStack = createBottomTabNavigator(
 	{
-		Perfil: Perfil,
-		Catálogo: Catalogo,
-		Consultas: Consultas,
+		Home,
+		Events,
+		Friends
 	},
 	{
-		navigationOptions: ({ navigation }) => ({
-			tabBarIcon: ({ focused, tintColor }) => {
-				const { routeName } = navigation.state;
-				let iconName;
-				switch(routeName) {
-					case 'Perfil':
-						iconName = `ios-person${focused ? '' : '-outline'}`;
-					break;
-					case 'Catálogo':	
-						iconName = `ios-list-box`;
-					break;
-					case 'Consultas':	
-						iconName = `md-clipboard`;
-					break;
-				}
-
-				return <Ionicons name={iconName} size={25} color={tintColor} />;
-},
-}),
-tabBarOptions: {
-	activeTintColor: 'tomato',
-	inactiveTintColor: 'gray',
-},
+	tabBarOptions: {
+		activeTintColor: 'tomato',
+		inactiveTintColor: 'gray',
+	},
 }
 );
 
