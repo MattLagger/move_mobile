@@ -25,7 +25,7 @@ class Login extends React.Component {
 			email: this.state.email,
 			password: this.state.password,
 		}
-		LoginAction(auth).then(resp => this.props.navigation.navigate('Perfil'))
+		LoginAction(auth).then(resp => this.props.navigation.navigate('Home'))
 	}
 
 	render() {
@@ -57,7 +57,7 @@ class Login extends React.Component {
 		onPress={() => this.props.navigation.navigate('Signup')}
 	/>
 	<Button
-		title="Go to Profile"
+		title="Go to Home"
 		onPress={() => this.props.navigation.navigate('Home')}
 	/>
 

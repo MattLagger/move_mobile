@@ -1,6 +1,6 @@
 import React from 'react'
-import {Text} from 'react-native'
+import {Button} from 'react-native'
 
-export default () => (
-    <Text> Events </Text>
+export default (props) => (
+    <Button title='Login' onPress={() => props.navigation.navigate('Login')} />
 )
