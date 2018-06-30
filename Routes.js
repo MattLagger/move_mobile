@@ -57,9 +57,9 @@ const AuthStack = createStackNavigator({
  */
 const MainStack = createBottomTabNavigator(
 	{
+		Friends,
 		Home,
-		Events,
-		Friends
+		Events
 	},
 	{
 	tabBarOptions: {
