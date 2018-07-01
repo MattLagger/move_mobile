@@ -23,6 +23,7 @@ import {
 import Home from './Screens/Home/Home';
 import Events from './Screens/Events/Events';
 import Friends from './Screens/Friends/Friends';
+import Explorar from './Screens/Explorar/Explorar';
 
 // Importa os componentes do AuthStack 
 import Login from './Screens/Auth/Login/Login';
@@ -61,7 +62,7 @@ const MainStack = createBottomTabNavigator(
 			}
 		},
 		Explorar:{
-			screen: Home,
+			screen: Explorar,
 			navigationOptions:{
 				tabBarIcon: ({tintColor}) => <Icon size={30} name='search' color={tintColor} />
 			}

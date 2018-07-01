@@ -2,12 +2,11 @@ import React from 'react'
 import {Text, StyleSheet} from 'react-native'
 import { Container, Content } from 'native-base'
 import Header from '../Layouts/Header'
-import Card from './Card'
 import {Profile} from '../../Config/Auth'
 import MapView from 'react-native-maps';
 
 
-class Home extends React.Component {
+class Explorar extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
@@ -41,18 +40,22 @@ class Home extends React.Component {
 		return(
 			<Container>
 				<Header title='Home'/>
+				<MapView
+					style={styles.map}
+					region={this.state.region}
+					showUserlocation={true}
+					showsMyLocationButton={true}
+					showsTraffic={true}
+					toolBarEnabled={true}
+				/>
 				<Text> {this.state.user.email}</Text>
-				<Content>
-				<Card />
-				<Card />
-				<Card />
-			</Content>
+
 			</Container>
 			)	
 }
 }
 
-export default Home 
+export default Explorar 
 const styles = StyleSheet.create({
 	map: {
 		...StyleSheet.absoluteFillObject,
