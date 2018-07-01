@@ -24,6 +24,7 @@ import Home from './Screens/Home/Home';
 import Events from './Screens/Events/Events';
 import Friends from './Screens/Friends/Friends';
 import Explorar from './Screens/Explorar/Explorar';
+import EventForm from './Screens/Events/EventForm';
 
 // Importa os componentes do AuthStack 
 import Login from './Screens/Auth/Login/Login';
@@ -68,7 +69,7 @@ const MainStack = createBottomTabNavigator(
 			}
 		},
 		Adicionar:{
-			screen: Home,
+			screen: EventForm,
 			navigationOptions:{
 				tabBarIcon: ({tintColor}) => <Icon size={30} name='add-box' color={tintColor} />
 			}
