@@ -27,6 +27,7 @@ import Friends from './Screens/Friends/Friends';
 // Importa os componentes do AuthStack 
 import Login from './Screens/Auth/Login/Login';
 import Signup from './Screens/Auth/Signup/Signup';
+import SuccessFullRegister from './Screens/Auth/Signup/SuccessFullRegister'
 
 /**
  * Navegador responsável pela autorização.
@@ -36,13 +37,9 @@ import Signup from './Screens/Auth/Signup/Signup';
  *
  */
 
-const AuthStack = createStackNavigator({
-	Login: Login,
-	Signup: Signup,
-},
-	{
-		headerMode: 'none',
-	}
+const AuthStack = createStackNavigator(
+	{ Login, Signup, SuccessFullRegister},
+	{ headerMode: 'none', }
 );
 
 /*
