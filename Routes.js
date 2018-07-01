@@ -50,9 +50,9 @@ const AuthStack = createStackNavigator({
  * na parte inferior da tela.
  *
  * Telas:
- *	1 - Perfil,
- *	2 -	Catálogo,
- *	3 -	Consultas
+ *	1 - Início,
+ *	2 -	Eventos,
+ *	3 - Amigos	
  *
  */
 const MainStack = createBottomTabNavigator(
@@ -61,6 +61,18 @@ const MainStack = createBottomTabNavigator(
 			screen: Home,
 			navigationOptions:{
 				tabBarIcon: ({tintColor}) => <Icon size={30} name='home' color={tintColor} />
+			}
+		},
+		Explorar:{
+			screen: Home,
+			navigationOptions:{
+				tabBarIcon: ({tintColor}) => <Icon size={30} name='search' color={tintColor} />
+			}
+		},
+		Adicionar:{
+			screen: Home,
+			navigationOptions:{
+				tabBarIcon: ({tintColor}) => <Icon size={30} name='add-box' color={tintColor} />
 			}
 		},
 		Events:{
