@@ -39,7 +39,7 @@ export default class Signup extends Component {
 								<Input style={{color: '#fff'}} />
 							</Item>
 						</Form>
-						<Button light bordered block style={{marginTop: 20}} onPress={() => this.props.navigation.navigate('Signup')}><Text>Cadastrar</Text></Button>
+						<Button light bordered block style={{marginTop: 20}} onPress={() => this.props.navigation.navigate('SuccessFullRegister')}><Text>Cadastrar</Text></Button>
 						<Text onPress={() => this.props.navigation.navigate('Login')} style={{fontSize: 20, color: '#fff', textAlign:'center', marginTop: 15, textDecorationLine: 'underline'}}>Já Cadastrado ?</Text>
 					</Content>
 				</LinearGradient>
